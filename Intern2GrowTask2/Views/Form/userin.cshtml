@@ -1,0 +1,22 @@
+﻿@model Intern2GrowTask2.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+     <link href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>existUser</title>
+</head>
+<body>
+    <h1 class="alert alert-success"> Welcome back <span class="text-danger"> @Model.UserName </span> to your Profile</h1>
+    <h1 class="alert alert-success"> Your Email is  <span class="text-danger"> @Model.Email </span> </h1>
+
+    <a asp-action="index" class="btn btn-outline-danger" > Back</a>
+</body>
+</html>

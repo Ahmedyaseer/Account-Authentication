@@ -1,0 +1,58 @@
+﻿@model Intern2GrowTask2.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>signup</title>
+</head>
+<body>
+
+<h4 class="alert alert-primary">Please Compelete below form to Create a new account </h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="signup" method="post">
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirnPassword" class="control-label"></label>
+                <input asp-for="ConfirnPassword" type="password" class="form-control" />
+                <span asp-validation-for="ConfirnPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-danger">Back to List</a>
+</div>
+<script src="/lib/jquery/dist/jquery-js"</script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"</script>
+    <script src="/lib/iquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+</body>
+</html>
